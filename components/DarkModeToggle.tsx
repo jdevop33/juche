@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
-import { SunIcon, MoonIcon } from '@heroicons/react/solid'
+import { SunIcon, MoonIcon } from '@heroicons/react/24/solid';
 
 const DarkModeToggle: React.FC = () => {
   const [mounted, setMounted] = useState(false)

@@ -1,5 +1,4 @@
 import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
 import Layout from '../components/Layout'
 import ChollimaSculpture from '../components/ChollimaSculpture'
@@ -46,12 +45,3 @@ export default function Home() {
     </Layout>
   )
 }
-
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common'])),
-    },
-  }
-}
-
